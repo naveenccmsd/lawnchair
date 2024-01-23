@@ -48,7 +48,7 @@ jobs:
           fi
       - name: Rename artifact
         continue-on-error: true
-        run: mv "${{ steps.sign-release-apk.outputs.signedReleaseFile }}" "${{ github.event.inputs.artifactName }}"
+        run: mv "build/outputs/apk/**/*.apk" "${{ github.event.inputs.artifactName }}"
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:

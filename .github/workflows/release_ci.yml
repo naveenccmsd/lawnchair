@@ -1,4 +1,4 @@
-name: Release update
+name: Release ci
 
 on:
   workflow_dispatch:
